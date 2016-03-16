@@ -8,6 +8,8 @@ aio_key: "YOUR-AIO-KEY"
 # Default base feed is "extrovrt". This will translate to
 # http://adafruit.io/username/extrovrt
 base_feed: "extrovrt"
+# Set this feed up if you want the app to log robot access
+log_feed: "extrovrt-log"
 
 
 # Name your robots here. They will be assumed to be located in the Adafruit
