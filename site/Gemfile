@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'adafruit-io', git: 'https://github.com/adafruit/io-client-ruby'
+gem 'sass'
+gem 'sinatra'
+gem 'sinatra-contrib'

@@ -1,0 +1,19 @@
+<% if @last_access %>
+  <div class="row">
+    <div class="col-sm-8">
+       <div class="alert alert-info" role="alert">Last Access: <%= @last_access %></div>
+    </div>  
+  </div>
+<% end %>
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Pick A Robot:</h1>
+  </div>
+</div>
+<% @robots.each do |robot| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>• <a href="/robot/<%= robot %>"><%= robot %></a></h3>
+    </div>
+  </div>
+<% end %>

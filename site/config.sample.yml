@@ -1,0 +1,20 @@
+# Authentication for the app
+username: "AUTH-USERNAME"
+password: "AUTH-PASSWORD"
+
+
+# Find this here: https://io.adafruit.com/settings under "view AIO keys"
+aio_key: "YOUR-AIO-KEY"
+# Default base feed is "extrovrt". This will translate to
+# http://adafruit.io/username/extrovrt
+base_feed: "extrovrt"
+
+
+# Name your robots here. They will be assumed to be located in the Adafruit
+# system at #{base_feed}-#{robot}
+# example: 
+#   robot name: "blastie"
+#   feed: http://io.adafruit.com/aio-username/feeds/extrovrt-blastie
+robots:
+  - "blastie"
+  - "dromicia"
