@@ -1,6 +1,8 @@
 # EXTROVRT Control
 Author: Donald L. Merand for [Explo](http://www.explo.org)
 
+![Site Screenshot](site_screenshot.png)
+
 This is a simple [Sinatra](http://sinatrarb.com) application designed to:
 - Make it easy to control multiple [EXTROVRT](https://github.com/exploration/EXTROVRT)s
 - Allow EXTROVRT control via the keyboard
