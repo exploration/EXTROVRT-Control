@@ -1,6 +1,5 @@
 # Method to call a robot to go into a direction
 goDirection = (direction, element=null, highlight=true) ->
-  console.log "going direction #{direction}"
   robot_id = $('#controls').data('robot-id')
   if highlight
     $(element).addClass('highlight')

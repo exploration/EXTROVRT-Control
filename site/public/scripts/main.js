@@ -10,7 +10,6 @@
     if (highlight == null) {
       highlight = true;
     }
-    console.log("going direction " + direction);
     robot_id = $('#controls').data('robot-id');
     if (highlight) {
       $(element).addClass('highlight');
