@@ -40,7 +40,7 @@ class Extrovrt < Sinatra::Base
   get "/:robot/:direction" do
     api!
     # post the adafruit feed "basefeed-robot"
-    feed_create aio, "#{settings.base_feed.downcase}-#{params['robot'].downcase}", params['direction'][0].upcase
+    feed_create aio, "#{settings.base_feed.downcase}-#{params['robot'].downcase}", params['direction'].upcase
   end
 
 

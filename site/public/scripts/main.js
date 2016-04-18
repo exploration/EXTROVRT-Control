@@ -10,6 +10,7 @@
     if (highlight == null) {
       highlight = true;
     }
+    console.log("going direction " + direction);
     robot_id = $('#controls').data('robot-id');
     if (highlight) {
       $(element).addClass('highlight');
@@ -23,62 +24,62 @@
   };
 
   $(function() {
-    return $('#forward').on('vmousedown', function() {
-      return goDirection("forward", this);
+    return $('#forward').on('mousedown', function() {
+      return goDirection("F", this);
     });
   });
 
   $(function() {
-    return $('#forward').on('vmouseup', function() {
-      return goDirection("stop", this, false);
+    return $('#forward').on('mouseup', function() {
+      return goDirection("S", this, false);
     });
   });
 
   $(function() {
-    return $('#back').on('vmousedown', function() {
-      return goDirection("back", this);
+    return $('#back').on('mousedown', function() {
+      return goDirection("B", this);
     });
   });
 
   $(function() {
-    return $('#back').on('vmouseup', function() {
-      return goDirection("stop", this, false);
+    return $('#back').on('mouseup', function() {
+      return goDirection("S", this, false);
     });
   });
 
   $(function() {
-    return $('#left').on('vmousedown', function() {
-      return goDirection("left", this);
+    return $('#left').on('mousedown', function() {
+      return goDirection("L", this);
     });
   });
 
   $(function() {
-    return $('#left').on('vmouseup', function() {
-      return goDirection("stop", this, false);
+    return $('#left').on('mouseup', function() {
+      return goDirection("S", this, false);
     });
   });
 
   $(function() {
-    return $('#right').on('vmousedown', function() {
-      return goDirection("right", this);
+    return $('#right').on('mousedown', function() {
+      return goDirection("R", this);
     });
   });
 
   $(function() {
-    return $('#right').on('vmouseup', function() {
-      return goDirection("stop", this, false);
+    return $('#right').on('mouseup', function() {
+      return goDirection("S", this, false);
     });
   });
 
   $(function() {
-    return $('#stop').on('vmousedown', function() {
-      return goDirection("stop", this);
+    return $('#stop').on('mousedown', function() {
+      return goDirection("S", this);
     });
   });
 
   $(function() {
-    return $('#stop').on('vmouseup', function() {
-      return goDirection("stop", this, false);
+    return $('#send-command').on('mousedown', function() {
+      return goDirection($('#command-input').val(), this, false);
     });
   });
 
@@ -88,15 +89,15 @@
       key = e.which;
       if (window.previousKey !== key) {
         if (key === 38) {
-          goDirection('forward', $('#forward'));
+          goDirection('F', $('#forward'));
         } else if (key === 40) {
-          goDirection('back', $('#back'));
+          goDirection('B', $('#back'));
         } else if (key === 37) {
-          goDirection('left', $('#left'));
+          goDirection('L', $('#left'));
         } else if (key === 39) {
-          goDirection('right', $('#right'));
+          goDirection('R', $('#right'));
         } else if (key === 83) {
-          goDirection('stop', $('#stop'));
+          goDirection('S', $('#stop'));
         }
         return window.previousKey = key;
       }
@@ -120,7 +121,7 @@
         el = $('#stop');
       }
       if (key === 37 || key === 38 || key === 39 || key === 40 || key === 83) {
-        goDirection('stop', el, false);
+        goDirection('S', el, false);
       }
       return window.previousKey = 0;
     });
