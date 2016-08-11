@@ -80,8 +80,9 @@ desc "Compile assets and deploy to #{remote_url}" +
   " - WARNING WILL DELETE REMOTE FILES NOT ON LOCAL MACHINE"
 task :deploy do
   exclude = ""
-  if File.exists?('./rsync-exclude')
-    exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
+  rsync_exclude_path = "#{local_site_dir}/.rsync-exclude"
+  if File.exists?(rsync_exclude_path)
+    exclude = "--exclude-from='#{File.expand_path(rsync_exclude_path)}'"
   end
   sh "rsync -rtzh --progress #{exclude} --delete #{local_site_dir}/ #{user}@#{remote_url}:#{remote_site_dir}/"
   sh "ssh #{user}@#{remote_url} 'cd #{remote_site_dir} && /usr/local/bin/bundle install --deployment'"
