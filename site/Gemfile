@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'adafruit-io', git: 'https://github.com/adafruit/io-client-ruby'
+gem 'bundler', '1.11.2'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'

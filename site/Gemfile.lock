@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/adafruit/io-client-ruby
-  revision: 9f2226f8fc0a61904beac6e575364196a416bc2e
+  revision: f58a90ad72e3ac7d86a2c570fd5a39477b0be64f
   specs:
-    adafruit-io (1.0.1)
+    adafruit-io (1.0.3)
       activemodel (~> 4.2)
       addressable (~> 2.3)
       faraday (~> 0.8)
@@ -12,10 +12,10 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.2.6)
-      activesupport (= 4.2.6)
+    activemodel (4.2.7)
+      activesupport (= 4.2.7)
       builder (~> 3.1)
-    activesupport (4.2.6)
+    activesupport (4.2.7)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -52,7 +52,7 @@ GEM
       sinatra (~> 1.4.0)
       tilt (>= 1.3, < 3)
     thread_safe (0.3.5)
-    tilt (2.0.4)
+    tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -61,6 +61,7 @@ PLATFORMS
 
 DEPENDENCIES
   adafruit-io!
+  bundler (= 1.11.2)
   sass
   sinatra
   sinatra-contrib
